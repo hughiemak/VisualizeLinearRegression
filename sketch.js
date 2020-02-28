@@ -20,9 +20,9 @@ function gradientDescent(){
 	for(var i=0;i<data.length;i++){
 		var x=data[i].x;
 		var y=data[i].y;
-		var guess = m*x+b - y;
-		m_grad += guess * x;
-		b_grad += guess ;
+		var cost = m*x+b - y;
+		m_grad += cost * x;
+		b_grad += cost ;
 	}
 	m_grad = learning_rate / data.length * m_grad;
 	b_grad = learning_rate / data.length * b_grad;
